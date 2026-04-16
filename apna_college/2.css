@@ -1,0 +1,19 @@
+button{
+    text-align: left;
+    color:red;
+    border:2px solid black;
+    padding:10px;
+    margin:20px;
+    border-radius:16px;
+    font-weight:bold;
+    font-size:18px;
+    padding-bottom:20px;
+    cursor:pointer;
+}
+p{
+    text-transform:uppercase;
+    text-align:center;
+    cursor:pointer;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}

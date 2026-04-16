@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate - Iqbal Bin Hafiz</title>
+    <style>
+        /* Base page styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6;
+            font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            color: #1a2c3d; /* Dark Navy for text */
+        }
+
+        /* Certificate Container and Patterned Border */
+        .certificate-container {
+            width: 1000px;
+            height: 707px; /* 1:1.41 landscape proportion */
+            padding: 2px;
+            background-image: linear-gradient(
+                -45deg,
+                #e3f2fd 1px,
+                transparent 1px,
+                transparent 4px
+            ),
+            linear-gradient(
+                45deg,
+                #e3f2fd 1px,
+                transparent 1px,
+                transparent 4px
+            );
+            background-size: 8px 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 8px; /* Slight outer rounding for realism */
+        }
+
+        /* Inner White Card with Shadows */
+        .certificate-inner {
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background-color: #ffffff;
+            margin: 2px auto;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 60px 80px;
+            box-shadow: inset 0 0 15px rgba(227,242,253,0.3), 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Decorative Corner Elements */
+        .corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #a3d8f4;
+        }
+        .top-left {
+            top: 20px; left: 20px;
+            border-right: none; border-bottom: none;
+            border-radius: 6px 0 0 0;
+        }
+        .top-right {
+            top: 20px; right: 20px;
+            border-left: none; border-bottom: none;
+            border-radius: 0 6px 0 0;
+        }
+        .bottom-left {
+            bottom: 20px; left: 20px;
+            border-right: none; border-top: none;
+            border-radius: 0 0 0 6px;
+        }
+        .bottom-right {
+            bottom: 20px; right: 20px;
+            border-left: none; border-top: none;
+            border-radius: 0 0 6px 0;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        /* Logo and Hex Badge Styling */
+        .logo-section, .badge-section {
+            display: flex;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 10px;
+            color: #1a2c3d;
+        }
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background-color: #a3d8f4;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Hexagon Badge */
+        .hex-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            width: 120px;
+        }
+        .hex-outer {
+            width: 80px;
+            height: 80px;
+            background-color: #e3f2fd;
+            border: 4px solid #a3d8f4;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .hex-inner {
+            width: 40px;
+            height: 30px;
+            background-color: #ffffff;
+            border: 2px solid #a3d8f4;
+            position: relative;
+        }
+        .hex-inner:after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; width: calc(100% + 4px); height: calc(100% + 4px);
+            border: 2px solid #a3d8f4;
+        }
+        .hex-badge-text {
+            font-size: 10px;
+            font-weight: 600;
+            color: #a3d8f4;
+        }
+
+        /* Main Content Styling */
+        main {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2.award-to {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+            color: #7f8c8d;
+        }
+        h1.recipient-name {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0 0 25px 0;
+            color: #1a2c3d;
+            letter-spacing: -1px;
+        }
+        p.completion-text {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+            color: #7f8c8d;
+        }
+        h2.course-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            color: #1a2c3d;
+        }
+        p.learning-path {
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0;
+            color: #1a2c3d;
+        }
+
+        /* Footer Layout and Styling */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 50px;
+        }
+        .date-section, .signature-section {
+            display: flex;
+            flex-direction: column;
+        }
+        .date-section {
+            align-items: flex-start;
+        }
+        .signature-section {
+            align-items: flex-end;
+            text-align: right;
+        }
+        .footer-value {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .footer-label {
+            font-size: 12px;
+            font-weight: 400;
+            color: #7f8c8d;
+        }
+
+        /* Add dynamic verification text for realism */
+        .verification {
+            position: absolute;
+            bottom: 10px;
+            left: 0; right: 0;
+            text-align: center;
+            font-size: 8px;
+            color: #7f8c8d;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-container">
+        <div class="certificate-inner">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <header>
+                <div class="logo-section">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">CodeSignal</span>
+                </div>
+                <div class="badge-section">
+                    <div class="hex-badge">
+                        <div class="hex-outer">
+                            <div class="hex-inner"></div>
+                        </div>
+                        <span class="hex-badge-text">Front-End Development</span>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <h2 class="award-to">This certificate is awarded to</h2>
+                <h1 class="recipient-name">Iqbal Bin Hafiz</h1>
+                <p class="completion-text">For successfully completing the course</p>
+                <h2 class="course-title">Web Development with HTML, CSS, and JavaScript</h2>
+                <p class="learning-path">as part of the "Full-Stack Engineering with JavaScript" learning path</p>
+            </main>
+
+            <footer>
+                <div class="date-section">
+                    <span class="footer-value">April 08, 2026</span>
+                    <span class="footer-label">Date of Completion</span>
+                </div>
+                <div class="signature-section">
+                    <span class="footer-value">Tigran Sloyan</span>
+                    <span class="footer-label">President and CEO</span>
+                </div>
+            </footer>
+            
+            <div class="verification">Verify at: codesignal.com/verify/CMNH80P310010L504ZE</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input tag in html</title>
+</head>
+<body>
+    <form>
+        <!--For checkbox-->
+        <div>
+            <input type="checkbox" id="check1" name="check1" checked>
+            <label for="check1">check1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="check2" name="check2">
+            <label for="check2">check2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="check3" name="check3">
+            <label for="check3">check3</label>
+        </div>
+        <div>
+            <input type="checkbox" id="check4" name="check4">
+            <label for="check4">check4</label>
+        </div>
+
+        <!--For date-->
+        <div>
+            <label for="date">Start date:</label>
+            <input type="date" id="start" name="trip-start" value="2018-01-01"
+            min="2018-01-01"
+            max="2018-12-31">
+        </div>
+        <div>
+            <label for="end date">End date:</label>
+            <input type="date" id="End_date" name="End_date"
+            value="2018-01-10"
+            min="2018-01-01"
+            max="2018-12-31">
+        </div>
+
+        <!--For date time local-->
+        <div>
+         <label for="datetime-lacal">Chose a time for your appointment</label>
+        <input type="datetime-local"
+        id="meeting time"
+        name="Meeting time"
+        value="2018-06-12T22:30"
+        min="2018-06-07T00:00"
+        min="2018-06-14T00:00">
+        </div>
+
+        <!--For Email-->
+        <div>
+            <label for="Email">Enter your example.com email</label>
+            <input type="email" id="Email" name="Email" size="30" required>
+        </div>
+
+        <div>
+            <label for="url">URL:</label>
+            <input type="url" name="url" id="url" placeholder="https://example.com"
+            size="30"
+            required>
+        </div>
+
+        <div>
+            <label for="week">Choose a week in may or june: </label>
+            <input type="week" id="week" min="2018-W18" max="2018-W26">
+        </div>
+    </form>
+</body>
+</html>

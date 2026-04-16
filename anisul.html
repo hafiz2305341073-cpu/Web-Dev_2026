@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .iq{
+            margin-bottom: 8px;
+        }
+        .iq label{
+            color:green;
+            font-size:large;
+            font-weight: bold;
+        }
+        .iq input{
+            border-radius:8;
+            width:150px;
+            height:18px;
+        }
+    </style>
+    <h1>Registration form</h1>
+     <fieldset>
+        <legend>Personal Information</legend>
+        <div class="iq">
+    <label for="fullname">FullName</label>
+    <input type="text" name="fullname" id="fullname">
+    </div>
+    <br>
+    <div>
+        <label for="Email">Email </label>
+        <input type="email" name="Email" id="Email">
+    </div>
+    <br>
+    <div>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+    </div>
+    <br>
+    <div>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <br>
+    <div>
+        <label for="file">Chose your photo = </label>
+        <input type="file" name="file" id="file">
+    </div>
+    <br>
+    <div>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <input type="radio" name="gender">Others
+    </div>
+    <br>
+    <div>
+        <label for="Religion">Religion</label>
+        <input type="checkbox" name="religion">Muslim
+        <input type="checkbox" name="religion">Hindu
+        <input type="checkbox" name="religion">Others
+    </div>
+     </fieldset>
+    <br>
+    <div>
+        <label for="Department">Department</label>
+        <select>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>LLB</option>
+            <option>English</option>
+        </select>
+    </div>
+     <br>
+    <div>
+        <label for="Msg">Comment:</label><br>
+        <textarea cols="40" rows="10"></textarea>
+    </div>
+    <div>
+        <button>Submit</button>
+        <button>Reset</button>
+    </div>
+</body>
+</html>

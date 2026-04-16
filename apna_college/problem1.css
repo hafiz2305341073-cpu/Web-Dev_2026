@@ -1,0 +1,9 @@
+#task{
+    color: rgb(2, 134, 243);
+    text-align:center;
+    font-weight:bold;
+    font-size:30px
+}
+#todo{
+    border: 5px;
+}
