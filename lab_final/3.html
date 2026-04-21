@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Wireless Mouse:</h1>
+    Quantity:
+    <input type="number" id="wm" name="Quantity">
+    <p>Subtotal= $<span id="st1">0</span></p>
+    </div>
+<br><br>
+    <div>
+    <h1>Keyboard</h1>
+    Quantity:
+    <input type="number" id="k" name="Quantity">
+    <p>Subtotal= $<span id="st2">0</span></p>
+    </div>
+
+<br><br>
+    <div>
+    <h1>headset</h1>
+    Quantity:
+    <input type="number" id="h" name="Quantity">
+    <p>Subtotal= $<span id="st3">0</span></p>
+    </div>
+<br><br>
+    <p> Grand total = $<span id="gt">0</span></p>
+    <p><span id="ad"></span></p>
+    <br>
+    <button onclick="calculate()">calculate</button>
+    <script>
+        function calculate(){
+            let qn1 = document.getElementById("wm").value;
+            qn1=parseInt(qn1);
+            let st1=qn1*25
+            document.getElementById("st1").innerText=st1;
+
+            let qn2 = document.getElementById("k").value;
+            qn2=parseInt(qn2);
+            let st2=qn2*45
+            document.getElementById("st2").innerText=st2;
+
+            let qn3 = document.getElementById("h").value;
+            qn3=parseInt(qn3);
+            let st3=qn3*60
+            document.getElementById("st3").innerText=st3;
+
+            let gt=st1+st2+st3;
+            document.getElementById("gt").innerText=gt;
+
+            if(gt>100){
+                let ad=gt-(gt*.1);
+                document.getElementById("ad").innerText="After Discount= $"+ad;
+            }else{
+                document.getElementById("ad").innerText="Discount applies only for orders above $100.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    <h1>Programming Book</h1>
+    <p>price: $40</p>
+    Quantity:
+    <input type="number" id="qn", name="Quantity">
+    <p>Total cost= $<span id="final">0</span></p>
+    <button onclick="calculate()">
+        Calculate
+    </button>
+    <script>
+        function calculate(){
+            let qn=document.getElementById("qn").value;
+            qn=parseInt(qn);
+            let total=qn*40;
+            document.getElementById("final").innerText=total;
+        }
+    </script>
+</body>
+</html>

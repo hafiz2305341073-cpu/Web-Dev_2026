@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab question</title>
+</head>
+<body>
+    
+        <h1> Product name : Wireless mouse</h1>
+        <p>price:$25</p>
+         <div>
+            Quentity:
+            <input type="number" id="qn" name="Quentity">
+         </div>
+         <p>Final cost : $<span id="final">0</span></p>
+         <button onclick="calculate()">calculate</button>   
+    <script>
+        function calculate(){
+            let qty=document.getElementById("qn").value;
+            qty= parseInt(qty);
+            let total = qty*25;
+            document.getElementById("final").innerText=total;
+        }
+    </script>
+</body>
+</html>
