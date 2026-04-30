@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Wireless Mouse</h1>
+    Quantity:
+    <input type="text" id="qn" name="qn">
+    <p>Total = $<span id=t>0</span></p>
+    <p>after 10% discount = $<span id=ad>0</span></p>
+    <button onclick="calculate()">calculate</button>
+
+    <script>
+        function calculate(){
+            let p = document.getElementById("qn").value;
+        p=parseInt(p);
+        let total = 25*p;
+        let discount = total-(total*0.1);
+        document.getElementById("t").innerText=total;
+        document.getElementById("ad").innerText=discount;
+        }
+    </script>
+</body>
+</html>
